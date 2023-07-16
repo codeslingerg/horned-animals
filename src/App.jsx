@@ -15,7 +15,7 @@ render() {
           <Modal.Title>Animal</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h2>{this.state.modalHornedBeastName}</h2>
+          <h1>{this.state.modalHornedBeastName}</h1>
           <img src={this.state.modalImgUrl} />
         </Modal.Body>
       
