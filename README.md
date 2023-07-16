@@ -1,21 +1,25 @@
-# horned-animals
+# LAB - Number
 
-***I'm building an app that allows users to get better understanding of their selected items.***
+## Project Name
 
-#Author: Gerard Johnson
+I build an app with a direct and powerful purpose. It does all of the things that it accomplishes well. I should describe the purpose and functionality so those that visit my README understand the app
 
-Links and Resources
+### Author: Gerard Johnson
+
+### Links and Resources
 
  [Vite](https://vitejs.dev/guide/)
  
  [Learn Vite – Frontend Build Tool Course](https://www.youtube.com/watch?v=VAeRhmpcWEQ)
 
-Number and name of feature: ________________________________
+* [submission PR](http://xyz.com)
+* Any Links you used as reference
 
-Estimate of time needed to complete: _____
+### Lighthouse Accessibility Report Score
 
-Start time: _____
+* Provide a screenshot of your score after running a Lighthouse Accessibility report.
 
-Finish time: _____
+### Reflections and Comments
 
-Actual time needed to complete: _____
+* Consider including the answers to your daily journal and submission questions here
+* This is also a good place to reflect on the tools and resources used and learned
