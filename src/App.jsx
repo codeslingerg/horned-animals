@@ -1,31 +1,27 @@
-// Step 1 Make sure to import React
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import React
+import React from 'react';
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
+
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 // Step 2 create a component
-render() 
-  return (
-    <Container>
-      <Header />
-      <Modal show={this.state.modalIsShowing} onHide={this.handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Animal</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <h1>{this.state.modalHornedBeastName}</h1>
-          <img src={this.state.modalImgUrl} />
-        </Modal.Body>
-      
-      </Modal>
-      <Main handleOpenAnimal={this.handleOpenAnimal} />
-      <Footer />
-    </Container>
+class App extends React.Component {
 
-);
-    
+  render() {
+
+    return (
+      <div>
+        <Header />
+        <Main />
+        <Footer />
+      </div>
+
+    );
+  }
+}  
   
 
 
