@@ -6,7 +6,7 @@ import './App.css'
 
 
 // Step 2 create a component
-render() {
+render() 
   return (
     <Container>
       <Header />
@@ -23,8 +23,11 @@ render() {
       <Main handleOpenAnimal={this.handleOpenAnimal} />
       <Footer />
     </Container>
-  );
-}
+
+);
+    
+  
+
 
 
 
