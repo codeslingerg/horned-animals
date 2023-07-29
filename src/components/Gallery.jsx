@@ -1,0 +1,39 @@
+// import React
+import React from 'react'
+import HornedBeast from './HornedBeast'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap';
+import Container from 'react-bootstrap/Container'
+import data from './data.json'
+
+// Create Component
+class Gallery extends React.Component {
+
+  render() {
+    let beastComponents = [];
+    data.forEach((beast) => {
+      beastComponents.push(
+        <Col key={beast._id} xs={3}>
+          <HornedBeast title={beast.title}
+            description={beast.description}
+            ImgLink={beast.image_url}
+            handleShowModal={this.props.handleShowModal}
+            beast={beast} />
+        </Col>
+      )
+    })
+  }
+
+  return(
+    <Container>
+      <Row>
+      {beastComponents}
+      </Row>
+    </Container>
+    
+  )
+  }
+}
+  
+// export default
+export default Gallery
