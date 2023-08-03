@@ -1,18 +1,19 @@
 // import React
-import React from 'react'
-import HornedBeast from './HornedBeast'
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap';
-import Container from 'react-bootstrap/Container'
-import data from './data.json'
+import React from 'react';
+
+//import other components
+import HornedBeast from './HornedBeast.jsx';
+import data from './data.json';
+import Row from 'react-bootstrap';
 
 // Create Component
 class Gallery extends React.Component {
 
   render() {
-    let beastComponents = [];
-    data.forEach((beast) => {
+  let beastComponents = [];
+    data.forEach((name) => {
       beastComponents.push(
+           //arr2
         <Col key={beast._id} xs={3}>
           <HornedBeast title={beast.title}
             description={beast.description}
@@ -20,18 +21,15 @@ class Gallery extends React.Component {
             handleShowModal={this.props.handleShowModal}
             beast={beast} />
         </Col>
-      )
-    })
-  }
-
-  return(
-    <Container>
-      <Row>
-      {beastComponents}
-      </Row>
-    </Container>
+      );
+    });
+    return (
+      <div>
+        <h2>Beasts:</h2>
+        {beastComponents}
+      </div>
     
-  )
+    );
   }
 }
   
