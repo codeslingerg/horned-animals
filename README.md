@@ -23,3 +23,13 @@ I build an app with a direct and powerful purpose. It does all of the things tha
 
 * Consider including the answers to your daily journal and submission questions here
 * This is also a good place to reflect on the tools and resources used and learned
+
+Number and name of feature: Lab 02 Add Images to Beasts
+
+Estimate of time needed to complete: 5:31pm
+
+Start time: 3:31pm
+
+Finish time: _____
+
+Actual time needed to complete: _____
