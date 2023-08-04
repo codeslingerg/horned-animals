@@ -26,7 +26,7 @@ class Gallery extends React.Component {
     // });
     return (
       <div>
-        <HornedBeast title="rhino" imgURL="https://www.shopmascot.com/image/cache/mascotnew/new196-800x800.jpg" description="Mother (or father) rhino with two babies" />
+        <HornedBeast title="Rhino" imgURL="https://www.shopmascot.com/image/cache/mascotnew/new196-800x800.jpg" description="Mother (or father) rhino with two babies" />
         <HornedBeast title="Unicorn" imgURL="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg" description="A unicorn and a narwhal nuzzling their horns" />
         <h2>Beasts:</h2>
         {beastComponents}

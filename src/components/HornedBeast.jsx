@@ -8,13 +8,13 @@ class HornedBeast extends React.Component {
         return (
             <div>
                 <h2>{this.props.title}</h2>
-                <img src={this.props.imgURL} alt= "" title=""/>
-                <p>hi nice to meet you</p>
+                <img src={this.props.imgURL} alt="" title="" />
+                <p>{this.props.description}</p>
             </div>
         );
     }
 }   
-
+// this.props works in tandem with the HornedBeasts components in Gallery.jsx.
 
 // export Component
 export default HornedBeast;
