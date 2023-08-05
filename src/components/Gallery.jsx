@@ -4,6 +4,7 @@ import React from 'react';
 //import other components
 import HornedBeast from './HornedBeast.jsx';
 import data from './data.json';
+import './beast.css'
 
 
 // Create Component
@@ -13,7 +14,7 @@ class Gallery extends React.Component {
     let beastComponents = [];
     data.forEach((object,i) => {
    
-      console.log(i)
+
 
       beastComponents.push(
         <HornedBeast title={data[i].title} imgURL={data[i].image_url} />
