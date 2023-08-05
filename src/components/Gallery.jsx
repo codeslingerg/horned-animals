@@ -5,27 +5,27 @@ import React from 'react';
 import HornedBeast from './HornedBeast.jsx';
 import data from './data.json';
 
-let namedata = [];
-
 
 // Create Component
 class Gallery extends React.Component {
 
   render() {
     let beastComponents = [];
-    namedata.forEach((title) => {
-    //   // arr2
-        beastComponents.push(title);
-          // <HornedBeast
-          //   title={HornedBeast.title}
-          //   imgURL={HornedBeast.imgURL} />
-    // //     <Col>
-    // //       <HornedBeast title={beast.title}
-    // //         description={beast.description}
-    // //         ImgLink={beast.image_url}
-    // //         handleShowModal={this.props.handleShowModal}
-    // //         beast={beast} />
-    // //     </Col>
+    data.forEach((object,i) => {
+   
+      console.log(i)
+
+      beastComponents.push(
+        <HornedBeast title={data[i].title} imgURL={data[i].image_url} />
+      );
+     
+          // <Col>
+          //   <HornedBeast title={beast.title}
+          //     description={beast.description}
+          //     ImgLink={beast.image_url}
+          //     handleShowModal={this.props.handleShowModal}
+          //     beast={beast} />
+          // </Col>
     
     });
 
@@ -33,6 +33,7 @@ class Gallery extends React.Component {
     return (
       <div>
         <h2>Beasts:</h2>
+        < HornedBeast title="Hello Rhino" imgURL="" description= ""/>
         { beastComponents }
       </div>
     
