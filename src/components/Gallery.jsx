@@ -2,13 +2,18 @@
 import React from 'react';
 
 //import other components
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+
 import HornedBeast from './HornedBeast.jsx';
 import data from './data.json';
 import './beast.css'
 
 
 // Create Component
-class Gallery extends React.Component {
+class Gallery extends React.Component {  
+  
 
   render() {
     let beastComponents = [];
@@ -17,10 +22,14 @@ class Gallery extends React.Component {
 
 
       beastComponents.push(
-        <HornedBeast title={data[i].title} imgURL={data[i].image_url} />
+        <HornedBeast
+          title={data[i].title}
+          imgURL={data[i].image_url}
+          handleOpenBeast={this.props.handleOpenBeast}
+        />
       );
      
-          // <Col>
+          // <Col>  
           //   <HornedBeast title={beast.title}
           //     description={beast.description}
           //     ImgLink={beast.image_url}
