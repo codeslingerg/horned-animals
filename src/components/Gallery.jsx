@@ -12,9 +12,7 @@ import './beast.css'
 
 
 // Create Component
-class Gallery extends React.Component {
-
-  
+class Gallery extends React.Component {  
   
 
   render() {
@@ -24,10 +22,14 @@ class Gallery extends React.Component {
 
 
       beastComponents.push(
-        <HornedBeast title={data[i].title} imgURL={data[i].image_url} />
+        <HornedBeast
+          title={data[i].title}
+          imgURL={data[i].image_url}
+          handleOpenBeast={this.props.handleOpenBeast}
+        />
       );
      
-          // <Col>
+          // <Col>  
           //   <HornedBeast title={beast.title}
           //     description={beast.description}
           //     ImgLink={beast.image_url}

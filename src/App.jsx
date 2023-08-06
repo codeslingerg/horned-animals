@@ -35,16 +35,19 @@ class App extends React.Component {
     });
   }
 
+  handleOpenBeast = (beastTitle, beastImgUrl) => {
+    console.log("open beast" + beastTitle, beastImgUrl);
+    this.setState({
+      modalIsShowing: true
+    });
+  }
+
 
 
   render() {
     return (
       <div>
         <Header />
-        <Button variant="primary"
-          onClick={this.handleShow}>
-          Launch modal
-        </Button>
         <Modal show={this.state.modalIsShowing} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Beast</Modal.Title>
@@ -54,7 +57,8 @@ class App extends React.Component {
             <img src={this.state.modalImgUrl} />
           </Modal.Body>
         </Modal>
-        <Gallery />
+
+        <Gallery handleOpenBeast={this.handleOpenBeast} />
         <Footer />
       </div>
 
