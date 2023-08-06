@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/Container';
 
 import HornedBeast from './HornedBeast.jsx';
 import data from './data.json';
-import './beast.css'
+import './Beast.css'
 
 
 // Create Component
@@ -43,7 +43,10 @@ class Gallery extends React.Component {
     return (
       <div>
         <h2>Beasts:</h2>
-        < HornedBeast title="Hello Rhino" imgURL="" description= ""/>
+        < HornedBeast
+          title=""
+          imgURL=""
+          description="" />
         { beastComponents }
       </div>
     
