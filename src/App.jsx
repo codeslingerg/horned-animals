@@ -16,8 +16,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalBeastName: "UniWhal",
-      modalImgUrl: "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
+      modalBeastName: "",
+      modalBeastImgUrl: "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
       modalIsShowing: false
     };
   }
@@ -38,7 +38,9 @@ class App extends React.Component {
   handleOpenBeast = (beastTitle, beastImgUrl) => {
     console.log("open beast" + beastTitle, beastImgUrl);
     this.setState({
-      modalIsShowing: true
+      modalIsShowing: true,
+      modalBeastTitle: beastTitle,
+      modalBeastImgUrl: beastImgUrl
     });
   }
 
@@ -53,8 +55,8 @@ class App extends React.Component {
             <Modal.Title>Beast</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h2>{this.state.modalBeastName}</h2>
-            <img src={this.state.modalImgUrl} />
+            <h2>{this.state.modalBeastTitle}</h2>
+            <img src={this.state.modalBeastImgUrl} />
           </Modal.Body>
         </Modal>
 
