@@ -13,27 +13,9 @@ import './beast.css'
 
 // Create Component
 class Gallery extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      modalBeastName: "UniWhal",
-      modalImgUrl: "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
-      modalIsShowing: false
-    };
-  }
 
-  handleShow = () => {
-    console.log("PLEASE SHOW THE MODAL!!");
-    this.setState({
-      modalIsShowing: true
-    });
-  }
   
-  handleClose = () => {
-    this.setState({
-      modalIsShowing: false
-    });
-  }
+  
 
   render() {
     let beastComponents = [];
