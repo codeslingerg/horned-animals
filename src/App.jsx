@@ -7,19 +7,24 @@ import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+// import data from "./components/data.json";
+// import NewForm from "./components/NewForm";
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import Form from 'react-bootstrap/Form';
 
 
 // Step 2 create a component
 class App extends React.Component {
+  //handle for filter
   constructor(props) {
     super(props);
     this.state = {
-      modalBeastName: "",
-      modalBeastImgUrl: "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
-      modalIsShowing: false
+      
+      // modalBeastName: "",
+      // modalBeastImgUrl: "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
+      // modalIsShowing: false
     };
   }
 
@@ -51,6 +56,15 @@ class App extends React.Component {
     return (
       <div>
         <Header />
+        {/* <form>
+          <Form.select onChange={this.handleSelect}>
+            <option value="1">1</option>
+            <option value="1">2</option>
+            <option value="1">2</option>
+            <option value="100"></option>
+          </Form.select>
+        </form> */}
+        
         <Modal show={this.state.modalIsShowing} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Beast</Modal.Title>
@@ -103,4 +117,4 @@ class App extends React.Component {
 // }
 
 // Step 3 export your component
-export default App
+export default App;
