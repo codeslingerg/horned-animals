@@ -7,18 +7,26 @@ import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import data from "./components/data.json";
+// import NewForm from "./components/NewForm";
 
+// import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 // Step 2 create a component
 class App extends React.Component {
+  //handle for filter
   constructor(props) {
     super(props);
     this.state = {
-      modalBeastName: "",
-      modalBeastImgUrl: "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
-      modalIsShowing: false
+      rawData: data,
+      filterByBy: "all"
+      
+      // modalBeastName: "",
+      // modalBeastImgUrl: "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
+      // modalIsShowing: false
     };
   }
 
@@ -44,12 +52,42 @@ class App extends React.Component {
     });
   }
 
-
+  handleSelect = (event) => {
+    let value = event.target.value;
+    console.log(value); 
+    this.setState({
+      filterBy: value
+    })
+   
+ }
 
   render() {
+    let filteredTitles = this.state.rawData;
+    let titleList = filteredTitles.map((title) => <li>{title}</li>);
+    if (this.state.filterBy === "1") {
+      filteredTitles = this.state.rawData.filter((title) => title[0] === "1");
+    }
+
     return (
       <div>
+        
         <Header />
+        <h1>Filter Beasts</h1>
+        <form>
+        <select onChange={this.handleSelect} value={this.state.filterBy}>
+          <option value="all">all</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="100">100</option>
+          </select>
+        </form>
+        
+        {/* <ul>
+          {titleList}
+        </ul> */}
+
         <Modal show={this.state.modalIsShowing} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Beast</Modal.Title>
@@ -63,6 +101,7 @@ class App extends React.Component {
         <Gallery handleOpenBeast={this.handleOpenBeast} />
         <Footer />
       </div>
+      
 
     );
   }
@@ -102,4 +141,4 @@ class App extends React.Component {
 // }
 
 // Step 3 export your component
-export default App
+export default App;
