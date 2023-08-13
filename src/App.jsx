@@ -21,6 +21,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      rawData: data,
+      filterByBy: "all"
       
       // modalBeastName: "",
       // modalBeastImgUrl: "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
@@ -53,23 +55,38 @@ class App extends React.Component {
   handleSelect = (event) => {
     let value = event.target.value;
     console.log(value); 
+    this.setState({
+      filterBy: value
+    })
    
  }
 
   render() {
+    let filteredTitles = this.state.rawData;
+    let titleList = filteredTitles.map((title) => <li>{title}</li>);
+    if (this.state.filterBy === "1") {
+      filteredTitles = this.state.rawData.filter((title) => title[0] === "1");
+    }
+
     return (
       <div>
         
         <Header />
         <h1>Filter Beasts</h1>
-        <select onChange={this.handleSelect}>
+        <form>
+        <select onChange={this.handleSelect} value={this.state.filterBy}>
+          <option value="all">all</option>
           <option value="0">0</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="100">100</option>
-        </select>
-
+          </select>
+        </form>
+        
+        {/* <ul>
+          {titleList}
+        </ul> */}
 
         <Modal show={this.state.modalIsShowing} onHide={this.handleClose}>
           <Modal.Header closeButton>
@@ -84,6 +101,7 @@ class App extends React.Component {
         <Gallery handleOpenBeast={this.handleOpenBeast} />
         <Footer />
       </div>
+      
 
     );
   }
