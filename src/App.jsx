@@ -7,12 +7,12 @@ import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-// import data from "./components/data.json";
+import data from "./components/data.json";
 // import NewForm from "./components/NewForm";
 
-
-import 'bootstrap/dist/css/bootstrap.min.css';
 // import Form from 'react-bootstrap/Form';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 // Step 2 create a component
@@ -50,21 +50,27 @@ class App extends React.Component {
     });
   }
 
-
+  handleSelect = (event) => {
+    let value = event.target.value;
+    console.log(value); 
+   
+ }
 
   render() {
     return (
       <div>
-        <Header />
-        {/* <form>
-          <Form.select onChange={this.handleSelect}>
-            <option value="1">1</option>
-            <option value="1">2</option>
-            <option value="1">2</option>
-            <option value="100"></option>
-          </Form.select>
-        </form> */}
         
+        <Header />
+        <h1>Filter Beasts</h1>
+        <select onChange={this.handleSelect}>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="100">100</option>
+        </select>
+
+
         <Modal show={this.state.modalIsShowing} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Beast</Modal.Title>

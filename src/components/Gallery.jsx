@@ -9,6 +9,7 @@ import Container from 'react-bootstrap/Container';
 import HornedBeast from './HornedBeast.jsx';
 import data from './data.json';
 import './Beast.css'
+// import NewForm from "./components/NewForm"
 
 
 // Create Component
